@@ -1,0 +1,1 @@
+from graphics.primitive import jpg

